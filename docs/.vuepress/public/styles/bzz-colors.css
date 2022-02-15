@@ -1,0 +1,27 @@
+:root {
+    --bzz-comment-color: #6A9955;
+    --bzz-string-color: #CE9178;
+    --bzz-type-color: #569CD6;
+    --bzz-number-color: #B5CEA8;
+    --bzz-function-call-color: #DCDCAA;
+}
+
+.bzz-comment {
+    color: var(--bzz-comment-color);
+}
+
+.bzz-string {
+    color: var(--bzz-string-color);
+}
+
+.bzz-number {
+    color: var(--bzz-number-color);
+}
+
+.bzz-type {
+    color: var(--bzz-type-color);
+}
+
+.bzz-function-call {
+    color: var(--bzz-function-call-color);
+}

@@ -1,0 +1,33 @@
+{
+  "name": "blizzard-docs",
+  "displayName": "Blizzard Docs",
+  "version": "1.0.0",
+  "description": "The documentation for the Blizzard Programming Language",
+  "keywords": [
+    "blizzard",
+    "bzz",
+    "programming-language",
+    "docs"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlizzardLang/BlizzardLang.github.io"
+  },
+  "author": {
+    "name": "Bradley Myers",
+    "url": "https://github.com/BLM16"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlizzardLang/BlizzardLang.github.io/issues"
+  },
+  "homepage": "https://BlizzardLang.github.io/BlizzardLang.github.io",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.35"
+  }
+}
