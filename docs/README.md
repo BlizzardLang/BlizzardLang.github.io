@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Introduction to Blizzard
+description: Introduction to the Blizzard Programming Language
 ---
 
 # Blizzard Programming Language

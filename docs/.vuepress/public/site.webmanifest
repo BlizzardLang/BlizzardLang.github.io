@@ -1,0 +1,21 @@
+{
+    "name": "Blizzard Programming Language Documentation",
+    "short_name": "Blizzard Docs",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#22272e",
+    "theme_color": "#3aa675",
+    "description": "The documentation for the Blizzard Programming Language",
+    "icons": [
+        {
+            "src": "/img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
