@@ -14,6 +14,11 @@
     color: var(--bzz-string-color);
 }
 
+.bzz-string::before,
+.bzz-string::after {
+    content: "\"";
+}
+
 .bzz-number {
     color: var(--bzz-number-color);
 }

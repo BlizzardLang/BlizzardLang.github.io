@@ -22,6 +22,6 @@ dec salary = 42.15;        // The person's salary
 dec money = (age * 365.25 * 24) * salary; 
 
 // Write out the data
-WRITELN(name + " is " + age + " years old, and makes $$" + salary + "/h.");
-WRITELN("If", name, "had been paid that much for his entire life, he would have already made $$" + money + "!");
+WRITELN(name + " is " + age + " years old, and makes $" + salary + "/h.");
+WRITELN("If", name, "had been paid that much for his entire life, he would have already made $" + money + "!");
 ```

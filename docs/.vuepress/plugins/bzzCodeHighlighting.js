@@ -21,7 +21,7 @@ function highlightBlizzardCode(code) {
     return code
         .replace(/(\/\*(\*(?!\/)|[^*])*\*\/)/g, '<span class="bzz-comment">$1</span>') // Block comment
         .replace(/(\/\/.*)/g, '<span class="bzz-comment">$1</span>') // Line comment
-        .replace(/((?<!class=)(\"(?!\>)[^\"]*\"))/g, '<span class="bzz-string">$1</span>') // String literal
+        .replace(/(?<!class=)\"((?!\>)[^\"]*)\"/g, '<span class="bzz-string">$1</span>') // String literal
         .replace(/(-?[0-9]*\.[0-9]+)/g, '<span class="bzz-number">$1</span>') // Decimal numbers
         .replace(/(-?[0-9]+)/g, '<span class="bzz-number">$1</span>') // Integer numbers
         .replace(/(str(?!i)|int|dec)/g, '<span class="bzz-type">$1</span>') // Type keywords
