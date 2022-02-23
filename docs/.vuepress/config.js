@@ -4,11 +4,17 @@ module.exports = {
         ['meta', { name: 'author', content: 'Bradley Myers' }],
         ['meta', { name: 'copyright', content: `Copyright (c) ${new Date().getFullYear()} Bradley Myers. All rights reserved.` }],
         ['link', { rel: 'stylesheet', href: '/styles/bzz-colors.css' }],
-        ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' }],
-        ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/favicon-32x32.png' }],
-        ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/favicon-16x16.png' }],
-        ['link', { rel: 'x-icon', type: 'image/ico', sizes: '48x48', href: '/favicon.ico' }],
-        ['link', { rel: 'manifest', href: '/site.webmanifest' }]
+        ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/icon/apple-touch-icon.png' }],
+        ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/icon/favicon-32x32.png' }],
+        ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/icon/favicon-16x16.png' }],
+        ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+        ['meta', { name: 'theme-color', content: '#22272e' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: '#1A1E24' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#22272e' }],
+        ['meta', { name: 'msapplication-config', content: '/img/icon/browserconfig.xml' }],
+        ['meta', { name: 'mask-icon', href: '/img/icon/safari-pinned-tab.svg', color: '#1f85b1' }]
     ],
     locales: {
         '/': {
@@ -21,7 +27,7 @@ module.exports = {
 
     // Theme Config
     themeConfig: {
-        logo: '/img/Blizzard_Icon_128x128.png',
+        logo: '/img/icon/Blizzard_Icon_128x128.png',
 
         repo: 'BlizzardLang',
         docsRepo: 'BlizzardLang/BlizzardLang.github.io',
@@ -39,6 +45,7 @@ module.exports = {
 
     // Plugin Config
     plugins: [
+        ['@vuepress/pwa', { skipWaiting: true }],
         require('./plugins/bzzCodeHighlighting.js')
     ]
 }
