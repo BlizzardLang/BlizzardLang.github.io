@@ -41,13 +41,13 @@ To let you run Blizzard code more easily, we suggest adding the folder to PATH. 
 
 To double check that Blizzard is installed correctly, open a terminal and navigate to the Grammar folder inside where your Blizzard installation is located. You can do this using the `cd` command.
 
-```sh:no-line-numbers
+```bat:no-line-numbers
 Windows: cd C:\Users\<you>\Blizzard\Grammar
-Linux: cd ~/Blizzard/Grammar
+Linux/Mac: cd ~/Blizzard/Grammar
 ```
 
 We can now make sure Blizzard is working by typing
-```sh:no-line-numbers
+```bat:no-line-numbers
 Blizzard example.bzz
 ```
 

@@ -2,6 +2,7 @@
 title: Code Editors
 description: Walks through setting up a code editor for Blizzard
 prev: ./installation
+next: ./hello-world
 ---
 
 # Code Editors

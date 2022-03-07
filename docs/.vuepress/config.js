@@ -1,9 +1,16 @@
+const defaultLangsShiki = require('@vuepress/plugin-shiki/node_modules/shiki/dist').BUNDLED_LANGUAGES.map(l => l.id);
+const blizzardLangShiki = {
+    id: "blizzard",
+    scopeName: "source.bzz",
+    grammar: require('./tmLanguage/blizzard-1_0_0.tmLanguage.json'),
+    aliases: ['bzz']
+}
+
 module.exports = {
     // Site Config
     head: [
         ['meta', { name: 'author', content: 'Bradley Myers' }],
         ['meta', { name: 'copyright', content: `Copyright (c) ${new Date().getFullYear()} Bradley Myers. All rights reserved.` }],
-        ['link', { rel: 'stylesheet', href: '/styles/bzz-colors.css' }],
         ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/icon/apple-touch-icon.png' }],
         ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/icon/favicon-32x32.png' }],
         ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/icon/favicon-16x16.png' }],
@@ -38,7 +45,8 @@ module.exports = {
             { text: 'Introduction', link: '/' },
             { text: 'Getting Started', link: '/getting-started', children: [
                 { text: 'Installation', link: '/getting-started/installation' },
-                { text: 'Code Editors', link: '/getting-started/editors' }
+                { text: 'Code Editors', link: '/getting-started/editors' },
+                { text: 'Hello World', link: '/getting-started/hello-world' }
             ]}
         ]
     },
@@ -46,6 +54,12 @@ module.exports = {
     // Plugin Config
     plugins: [
         ['@vuepress/pwa', { skipWaiting: true }],
-        require('./plugins/bzzCodeHighlighting.js')
-    ]
+        ['@vuepress/shiki', {
+            theme: 'dark-plus',
+            langs: [
+                ...defaultLangsShiki, // Load the default languages
+                blizzardLangShiki // Load the custom Blizzard language
+            ]
+        }]
+    ],
 }
