@@ -47,6 +47,12 @@ module.exports = {
                 { text: 'Installation', link: '/getting-started/installation' },
                 { text: 'Code Editors', link: '/getting-started/editors' },
                 { text: 'Hello World', link: '/getting-started/hello-world' }
+            ]},
+            { text: 'Language Reference', link: '/language', children: [
+                { text: 'Types', link: '/language/types' },
+                { text: 'Operators', link: '/language/operators' },
+                { text: 'Functions', link: '/language/functions' },
+                { text: 'Comments', link: '/language/comments' }
             ]}
         ]
     },

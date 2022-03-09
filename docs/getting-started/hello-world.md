@@ -2,11 +2,12 @@
 title: Hello World
 description: Walks through creating a project and writing hello world to the console
 prev: ./editors
+next: /language
 ---
 
 # Hello World!
 
-Now that you have installed Blizzard, let's write your first Blizzard program. Tradition is to write a program that outputs `Hello World!` to the console, so we will setup a blizzard project and create a hello world program here.
+Now that you have installed Blizzard, let's write your first Blizzard program. Tradition is to write a program that outputs `Hello World!` to the console, so we will setup a Blizzard project and create a hello world program here.
 
 ## Making the directories
 
