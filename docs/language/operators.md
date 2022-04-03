@@ -34,9 +34,9 @@ The plus operator performs addition when applied to 2 numeric type values. It pe
 2.2 + 9.1   // 11.3
 5 + 4.6     // 9.6
 
-"Hello " + "World"                  // Hello World
-"John is " + 23 + " years old"      // John is 23 years old
-99 + " bottles of beer on the wall" // 99 bottles of beer on the wall
+"Hello " + "World"                      // Hello World
+"John is " + 2 + 3 + " years old"       // John is 23 years old
+90 + 9 + " bottles of beer on the wall" // 99 bottles of beer on the wall
 ```
 
 ### Minus `-`
