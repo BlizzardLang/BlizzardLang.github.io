@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.35">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <meta name="author" content="Bradley Myers"><meta name="copyright" content="Copyright (c) 2022 Bradley Myers. All rights reserved."><link rel="apple-touch-icon" sizes="180x180" href="/img/icon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/img/icon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icon/favicon-16x16.png"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#22272e"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#1A1E24"><meta name="msapplication-TileColor" content="#22272e"><meta name="msapplication-config" content="/img/icon/browserconfig.xml"><meta name="mask-icon" href="/img/icon/safari-pinned-tab.svg" color="#1f85b1"><title>Blizzard Docs</title><meta name="description" content="The documentation for the Blizzard Programming Language">
+    <link rel="modulepreload" href="/assets/app.37188918.js"><link rel="modulepreload" href="/assets/404.html.f166316b.js"><link rel="modulepreload" href="/assets/404.html.bee13de6.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="stylesheet" href="/assets/style.e8e8fc80.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><div class="theme-default-content"><h1>404</h1><blockquote>There&#39;s nothing here.</blockquote><a href="/" class="">Take me home</a></div></div><!----><!--]--></div>
+    <script type="module" src="/assets/app.37188918.js" defer></script>
+  </body>
+</html>

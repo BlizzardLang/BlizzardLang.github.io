@@ -1,0 +1,1 @@
+const t={key:"v-8daa1a0e",path:"/",title:"Introduction",lang:"en-US",frontmatter:{title:"Introduction",description:"Introduction to the Blizzard Programming Language"},excerpt:"",headers:[],git:{updatedTime:1646679564e3,contributors:[{name:"Bradley Myers",email:"myers.bradley@hotmail.com",commits:4}]},filePathRelative:"README.md"};export{t as data};
