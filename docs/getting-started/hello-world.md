@@ -29,7 +29,7 @@ Now we are all ready to write some code!
 WRITELN("Hello World!");
 ```
 4. Open a terminal in the current directory. In VSCode you can click Terminal > New Terminal.
-5. Run the command `Blizzard main.bzz`. You should see the words `Hello World!` on screen.
+5. Run the command `Blizzard run main.bzz`. You should see the words `Hello World!` on screen.
 
 :tada: Congratulations! You have just written your first Blizzard program!
 
