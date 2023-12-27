@@ -1,4 +1,8 @@
-const defaultLangsShiki = require('@vuepress/plugin-shiki/node_modules/shiki/dist').BUNDLED_LANGUAGES.map(l => l.id);
+import { pwaPlugin } from '@vuepress/plugin-pwa';
+import { searchPlugin } from '@vuepress/plugin-search';
+import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { defaultTheme } from 'vuepress';
+
 const blizzardLangShiki = {
     id: "blizzard",
     scopeName: "source.bzz",
@@ -6,7 +10,7 @@ const blizzardLangShiki = {
     aliases: ['bzz']
 }
 
-module.exports = {
+export default {
     // Site Config
     head: [
         ['meta', { name: 'author', content: 'Bradley Myers' }],
@@ -33,7 +37,7 @@ module.exports = {
     },
 
     // Theme Config
-    themeConfig: {
+    theme: defaultTheme({
         logo: '/img/icon/Blizzard_Icon_128x128.png',
 
         repo: 'BlizzardLang',
@@ -41,31 +45,47 @@ module.exports = {
         docsBranch: 'master',
         docsDir: 'docs',
 
-        sidebar: [
-            { text: 'Introduction', link: '/' },
-            { text: 'Getting Started', link: '/getting-started', children: [
-                { text: 'Installation', link: '/getting-started/installation' },
-                { text: 'Code Editors', link: '/getting-started/editors' },
-                { text: 'Hello World', link: '/getting-started/hello-world' }
-            ]},
-            { text: 'Language Reference', link: '/language', children: [
-                { text: 'Types', link: '/language/types' },
-                { text: 'Operators', link: '/language/operators' },
-                { text: 'Functions', link: '/language/functions' },
-                { text: 'Comments', link: '/language/comments' }
-            ]}
-        ]
-    },
+        locales: {
+            '/': {
+                navbar: [
+                    { text: 'Download', link: 'https://github.com/BlizzardLang/Blizzard_Installer/releases/latest' }
+                ],
+                sidebar: [
+                    { text: 'Introduction', link: '/' },
+                    { text: 'Getting Started', link: '/getting-started', children: [
+                        { text: 'Installation', link: '/getting-started/installation' },
+                        { text: 'Code Editors', link: '/getting-started/editors' },
+                        { text: 'Hello World', link: '/getting-started/hello-world' }
+                    ]},
+                    { text: 'Language Reference', link: '/language', children: [
+                        { text: 'Types', link: '/language/types' },
+                        { text: 'Operators', link: '/language/operators' },
+                        { text: 'Functions', link: '/language/functions' },
+                        { text: 'Comments', link: '/language/comments' }
+                    ]}
+                ]
+            }
+        }
+    }),
 
     // Plugin Config
     plugins: [
-        ['@vuepress/pwa', { skipWaiting: true }],
-        ['@vuepress/shiki', {
+        pwaPlugin({
+            skipWaiting: true
+        }),
+        shikiPlugin({
             theme: 'dark-plus',
             langs: [
-                ...defaultLangsShiki, // Load the default languages
+                'bat',
                 blizzardLangShiki // Load the custom Blizzard language
             ]
-        }]
+        }),
+        searchPlugin({
+            locales: {
+                '/': {
+                    placeholder: 'Search'
+                }
+            }
+        })
     ],
 }

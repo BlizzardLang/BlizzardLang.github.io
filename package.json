@@ -9,6 +9,7 @@
     "programming-language",
     "docs"
   ],
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -29,7 +30,8 @@
   "homepage": "https://BlizzardLang.github.io/BlizzardLang.github.io",
   "devDependencies": {
     "@vuepress/plugin-pwa": "^2.0.0-beta.35",
-    "@vuepress/plugin-shiki": "^2.0.0-beta.36",
-    "vuepress": "^2.0.0-beta.35"
+    "@vuepress/plugin-search": "^2.0.0-rc.0",
+    "@vuepress/plugin-shiki": "^2.0.0-rc.0",
+    "vuepress": "^2.0.0-rc.0"
   }
 }
